@@ -26,18 +26,43 @@ public class Driver2
         //need two instances at the least, then Output information.
         CS4141Project instance = new CS4141Project();
         
+        
         instance.init();
+        instance.Display(); 
+                        
         instance.add();
         instance.Display();
+                        
+        System.out.print("Length = ");
+        instance.length();       
+        
+        instance.remove(1);
+        instance.Display();
+        
+        instance.add();
+        instance.Display();
+                         
+       
+        instance.move("Sheet5", "Sheet3", false);
+        instance.Display();
+       
         instance.moveToEnd(3);
         instance.Display();
-        instance.remove(3);
+        
+        System.out.print("Index of Sheet5 = ");
+        instance.index("Sheet5");
+        
+        instance.rename("Sheet4","YouNeedSleep");
         instance.Display();
-        //instance.move();
+        
+        instance.move(3,5, true);
         instance.Display();
-        instance.add();
-        instance.Display();
-        instance.length();
+        
+        instance.moveToEnd("Sheet1");
+        instance.Display(); 
+        
+        instance.remove("Sheet5");
         instance.Display();
     }
 }
+      
